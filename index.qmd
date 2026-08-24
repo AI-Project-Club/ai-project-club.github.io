@@ -1,36 +1,46 @@
 ---
 title: "AI Project Club"
-subtitle: "Bring a project. Use AI to move it forward. Learn from others. Leave with progress."
+subtitle: "Bring a project. Explore AI. Build community."
 ---
 
-## What is the AI Project Club? 
-AI Project Club is a regular in-person session where people bring a project, task, or idea they want to move forward using AI.
-It is for creatives, founders, freelancers, researchers, side-project people, and anyone curious about using AI more practically in their work.
-You do not need to be an expert. Bring a laptop, a project, and a willingness to experiment.
+### What is the AI Project Club? 
+
+AI Project Club is a space to work on your project, get unstuck with AI, and build momentum with a community around you!
 
 ## Who it is for?
 
-This could be for you if you are:
+This club is for those who create, build or do.
+
+Are you currently:
 
 - writing, researching, designing, or creating content
 - testing a business or side-project idea
 - trying to use AI more effectively in your everyday workflow
 - looking for accountability and focused time to work
-- curious about AI but unsure how to apply it to real projects
 
-## What happens in a session?
-Each session lasts around two hours and follows the following format:
+## What happens in a meetup?
 
-- welcome and intention setting
-- focused project work
-- townhall for optional sharing, questions, and group support
+- meet people (name badges provided!)
+- define your focus
+- work, work, work!
+- townhall
+
+The meetup is not a silent space. We play background music to help with focus. Some tables are set up for collaboration, and others are set up for uninteruppted work. 
+
+The townhall brings the community together by creating space for:
+
+- optional sharing
+- questions
+- group support/feedback
+
 
 ## What to bring?
 
 - a laptop
-- access to any AI tool you already use, such as ChatGPT, Claude, Gemini, Perplexity, Midjourney, Canva, Notion AI, or others
-- a project, task, question, or idea to work on
+- BYO AI: bring access to whichever AI tools you already use
+- a project, task, question, or idea
 - headphones if you like to focus quietly
+
 
 ## When and where? 
 
@@ -40,8 +50,6 @@ Next session: tbc
 
 ## How to join?
 
-Sign up options will be shared shortly
+Sign up options will be shared shortly...
 
 ## Community expectations
-
-We want this to be a friendly, respectful, and practical space. Share only what you are comfortable sharing. Respect other people’s ideas and privacy. Use AI tools thoughtfully, especially when working with personal, private, or sensitive information.
