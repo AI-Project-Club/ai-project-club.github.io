@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "AI Project Club was founded by Louise Braithwaite and Georgia Atkinson.\nSponsored by…"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "AI Project Club",
@@ -39,14 +32,14 @@
     "href": "index.html#when-and-where",
     "title": "AI Project Club",
     "section": "When and where?",
-    "text": "When and where?\nWhere: Newcastle upon Tyne venue tbc When: October 2026 Next session: tbc"
+    "text": "When and where?\nWhere: Newcastle upon Tyne venue tbc\nWhen: October 2026\nNext session: tbc"
   },
   {
     "objectID": "index.html#how-to-join",
     "href": "index.html#how-to-join",
     "title": "AI Project Club",
     "section": "How to join?",
-    "text": "How to join?\nSign up options will be shared shortly…"
+    "text": "How to join?\nRegister your interest now!"
   },
   {
     "objectID": "index.html#community-expectations",
@@ -54,5 +47,12 @@
     "title": "AI Project Club",
     "section": "Community expectations",
     "text": "Community expectations\nBe friendly. Be curious. Get involved.\nAI Project Club is a space to work, experiment, collaborate and have fun alongside others. Share ideas, ask questions, offer help and celebrate progress.\nRespect other people’s ideas and privacy, share only what you are comfortable sharing, and use AI thoughtfully — especially with personal, private or sensitive information."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "AI Project Club was founded by Louise Braithwaite and Georgia Atkinson.\nSponsored by…"
   }
 ]
