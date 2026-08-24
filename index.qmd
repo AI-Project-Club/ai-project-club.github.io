@@ -3,7 +3,7 @@ title: "AI Project Club"
 subtitle: "Bring a project. Use AI to move it forward. Learn from others. Leave with progress."
 ---
 
-## What is the AI Project Club?
+## What is the AI Project Club? 
 AI Project Club is a regular in-person session where people bring a project, task, or idea they want to move forward using AI.
 It is for creatives, founders, freelancers, researchers, side-project people, and anyone curious about using AI more practically in their work.
 You do not need to be an expert. Bring a laptop, a project, and a willingness to experiment.

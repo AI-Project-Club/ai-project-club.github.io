@@ -12,7 +12,7 @@ website:
 
 format:
   html:
-    theme: journa
+    theme: journal
     css: styles.css
     toc: true
 
