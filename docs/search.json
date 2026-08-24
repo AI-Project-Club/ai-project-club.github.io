@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "AI Project Club was founded by Louise Braithwaite and. Georgia Atkinson.\nSponsored by…"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "AI Project Club",
@@ -61,5 +54,12 @@
     "title": "AI Project Club",
     "section": "Community expectations",
     "text": "Community expectations\nWe want this to be a friendly, respectful, and practical space. Share only what you are comfortable sharing. Respect other people’s ideas and privacy. Use AI tools thoughtfully, especially when working with personal, private, or sensitive information."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "AI Project Club was founded by Louise Braithwaite and Georgia Atkinson.\nSponsored by…"
   }
 ]
