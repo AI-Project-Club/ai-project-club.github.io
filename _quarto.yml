@@ -9,6 +9,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: https://forms.gle/2mffx9cai6ohkN8p8
+        text: Register
 
 format:
   html:
