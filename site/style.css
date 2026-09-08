@@ -1,0 +1,1068 @@
+/* ==========================================================================
+   AI Project Club — Style Sheet
+   Palette:
+   Blue         #0369EB
+   Pink         #E2A5A5
+   White        #EDEDED
+   Light Orange #F1A17C
+   Dark Orange  #C9895B
+   Yellow       #F5C557
+
+   Expected font files:
+   /fonts/ClashDisplay-Regular.woff
+   /fonts/ClashDisplay-Semibold.woff
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. Fonts
+   ========================================================================== */
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("./fonts/ClashDisplay-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("./fonts/ClashDisplay-Semibold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+
+/* ==========================================================================
+   2. Design tokens
+   ========================================================================== */
+
+:root {
+  /* Brand colours */
+  --color-blue: #0369EB;
+  --color-pink: #E2A5A5;
+  --color-white: #FFFFFF;
+  --color-light-orange: #F1A17C;
+  --color-dark-orange: #EB8503;
+  --color-yellow: #F5C557;
+
+  /* Semantic colours */
+  --color-background: var(--color-white);
+  --color-text: var(--color-blue);
+  --color-text-on-warm: var(--color-white);
+
+  /* Typography */
+  --font-display: "Clash Display", Arial, Helvetica, sans-serif;
+
+  /* Layout */
+  --page-max-width: 1400px;
+  --page-gutter: clamp(1.25rem, 2.8vw, 2rem);
+  --section-gap: clamp(3rem, 7vw, 6.5rem);
+  --card-gap: clamp(0.4rem, 0.9vw, 0.7rem);
+
+  /* Motion */
+  --transition-fast: 180ms ease;
+  --transition-medium: 280ms ease;
+}
+
+
+/* ==========================================================================
+   3. Reset / base
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-background);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.12em;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+::selection {
+  background: var(--color-yellow);
+  color: var(--color-blue);
+}
+
+
+/* ==========================================================================
+   4. Site Header & Navigation
+   ========================================================================== */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--page-gutter);
+  background: var(--color-background);
+  border-bottom: 1px solid rgba(3, 105, 235, 0.1);
+}
+
+.brand {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--color-blue);
+}
+
+.site-nav {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+}
+
+.site-nav a {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  font-weight: 400;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.site-nav a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   5. Main Content Container
+   ========================================================================== */
+
+main {
+  width: min(100%, var(--page-max-width));
+  margin: 0 auto;
+}
+
+.section-pad {
+  padding: var(--section-gap) var(--page-gutter);
+}
+
+
+/* ==========================================================================
+   6. Hero Section
+   ========================================================================== */
+
+.hero {
+  padding-bottom: var(--section-gap);
+}
+
+.eyebrow {
+  margin-bottom: clamp(0.9rem, 1.8vw, 1.25rem);
+  color: var(--color-blue);
+  font-size: clamp(0.82rem, 1.2vw, 1rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 1200px;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  color: var(--color-blue);
+  font-size: clamp(3rem, 7vw, 6.2rem);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+
+.lede {
+  max-width: 38rem;
+  margin-bottom: 0;
+  color: var(--color-blue);
+  font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.hero-shape {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  width: clamp(160px, 25vw, 350px);
+  height: clamp(100px, 15vw, 200px);
+  background: rgba(242, 165, 124, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-bottom {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+
+/* ==========================================================================
+   7. Section Headings
+   ========================================================================== */
+
+.section-number {
+  display: block;
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(3, 105, 235, 0.6);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.section-heading h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--color-blue);
+}
+
+.statement-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.statement-grid h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.statement-grid p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
+}
+
+
+/* ==========================================================================
+   8. Interest Cards Grid
+   ========================================================================== */
+
+.cards-section {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--card-gap);
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.interest-card {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(1.5rem, 2.5vw, 2.5rem);
+  min-height: clamp(200px, 22vw, 280px);
+  overflow: hidden;
+  color: var(--color-text-on-warm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.interest-card span {
+  display: block;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 2;
+  margin-bottom: auto;
+}
+
+.interest-card h3 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.interest-card p {
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+/* Card background colors */
+.card-pink {
+  background: var(--color-pink);
+}
+
+.card-dark-orange {
+  background: var(--color-dark-orange);
+}
+
+.card-light-orange {
+  background: var(--color-light-orange);
+}
+
+/* Card cutout treatment */
+.card-cutout::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: clamp(1rem, 2vw, 1.5rem);
+  bottom: 0;
+  width: min(45%, 12rem);
+  height: 85%;
+  background: var(--color-white);
+}
+
+.card-cutout span,
+.card-cutout h3,
+.card-cutout p {
+  color: var(--color-blue);
+}
+
+/* Decorative half-circle shapes */
+.half-circle {
+  position: absolute;
+  z-index: 0;
+  bottom: -1px;
+  right: clamp(1rem, 2vw, 1.5rem);
+  width: clamp(120px, 18vw, 180px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Half-circle in top-right corner (for interest-card in two-column-card) */
+.two-column-card .interest-card .half-circle {
+  bottom: auto;
+  top: 0;
+  right: 0;
+  width: clamp(120px, 18vw, 180px);
+  aspect-ratio: 1;
+  border-radius: 0;
+  border-radius: 0 0 0 100%;
+}
+
+/* List items in two-column-box with white cutout */
+.two-column-box.card-cutout ul {
+  max-width: min(80%, 21rem);
+  padding-left: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.two-column-box.card-cutout li {
+  color: var(--color-blue);
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.blue-circle {
+  background: var(--color-blue);
+}
+
+.yellow-circle {
+  background: var(--color-yellow);
+}
+
+
+/* ==========================================================================
+   9. Two-Column Card Layout
+   ========================================================================== */
+
+.two-column-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+  padding: var(--section-gap) var(--page-gutter);
+}
+
+.two-column-content h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin: 0;
+  color: var(--color-blue);
+}
+
+.two-column-box {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(1.5rem, 2.5vw, 2.5rem);
+  min-height: clamp(200px, 22vw, 280px);
+  overflow: hidden;
+  color: var(--color-text-on-warm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.two-column-box span {
+  display: block;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 2;
+}
+
+.two-column-box h3 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.two-column-box p {
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+/* Two-column box cutout treatment */
+.two-column-box.card-cutout {
+  padding-left: clamp(1.5rem, 3vw, 2rem);
+  padding-right: clamp(1.5rem, 3vw, 2rem);
+  padding-top: clamp(2.5rem, 4vw, 3.5rem);
+  padding-bottom: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.two-column-box.card-cutout::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: clamp(1rem, 2vw, 1.5rem);
+  bottom: 0;
+  width: min(88%, 24rem);
+  height: 92%;
+  background: var(--color-white);
+}
+
+.two-column-box.card-cutout span,
+.two-column-box.card-cutout h3,
+.two-column-box.card-cutout p {
+  color: var(--color-blue);
+  max-width: min(80%, 21rem);
+}
+
+@media (max-width: 760px) {
+  .two-column-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========================================================================
+   10. Meetup/Steps Section
+   ========================================================================== */
+
+.meetup {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.steps article {
+  text-align: center;
+}
+
+.steps article span {
+  display: block;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-weight: 600;
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  color: var(--color-blue);
+}
+
+.steps article h3 {
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem 0;
+  color: var(--color-blue);
+}
+
+.steps article p {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+.step-work {
+  background: rgba(226, 165, 165, 1);
+  padding: clamp(1.5rem, 2vw, 2rem);
+  border-radius: 8px;
+}
+
+.step-work75 {
+  background: rgba(226, 165, 165, 0.75);
+  padding: clamp(1.5rem, 2vw, 2rem);
+  border-radius: 8px;
+}
+
+.step-work5 {
+  background: rgba(226, 165, 165, 0.5);
+  padding: clamp(1.5rem, 2vw, 2rem);
+  border-radius: 8px;
+}
+
+.step-work15 {
+  background: rgba(226, 165, 165, 0.15);
+  padding: clamp(1.5rem, 2vw, 2rem);
+  border-radius: 8px;
+}
+
+
+.step-work-white {
+  background: #EDEDED;
+  padding: clamp(1.5rem, 2vw, 2rem);
+  border-radius: 8px;
+}
+
+.step-work h3 {
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+}
+
+.meetup-note {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  line-height: 1.6;
+  /*max-width: 50rem;*/
+  font-style: italic;
+  opacity: 0.85;
+}
+
+
+/* ==========================================================================
+   10. Townhall Section
+   ========================================================================== */
+
+.townhall {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+
+.townhall-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.townhall-grid h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.townhall-grid p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+
+/* ==========================================================================
+   11. Bring Section
+   ========================================================================== */
+
+.bring {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+
+.bring h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin: clamp(1rem, 2vw, 1.5rem) 0;
+  color: var(--color-blue);
+}
+
+.bring-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin: clamp(2rem, 4vw, 3rem) 0;
+  max-width: 50rem;
+}
+
+.bring-list div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.bring-list span {
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-weight: 600;
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.bring-list strong {
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  font-weight: 600;
+  color: var(--color-blue);
+}
+
+.small-copy {
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  line-height: 1.5;
+  color: rgba(3, 105, 235, 0.7);
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  max-width: 50rem;
+}
+
+
+/* ==========================================================================
+   12. Details Section
+   ========================================================================== */
+
+.details {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.details-main h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin: 0;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.date-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 2px solid var(--color-blue);
+  border-radius: 4px;
+  gap: 0.25rem;
+}
+
+.date-badge span {
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+}
+
+.date-badge strong {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: var(--color-blue);
+}
+
+.details-meta {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 3vw, 2.5rem);
+}
+
+.details-meta div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.details-meta span {
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(3, 105, 235, 0.6);
+}
+
+.details-meta strong {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 600;
+  color: var(--color-blue);
+}
+
+
+/* ==========================================================================
+   13. Join Section
+   ========================================================================== */
+
+.join {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+
+.join-kicker {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.join-link {
+  display: inline-block;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--color-blue);
+  text-decoration: none;
+  transition: opacity var(--transition-medium);
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.join-link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   14. Community Section
+   ========================================================================== */
+
+.community {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+
+.community h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem) 0;
+}
+
+.community-copy {
+  display: grid;
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+  max-width: 60rem;
+}
+
+.community-copy p {
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   15. Site Footer
+   ========================================================================== */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--page-gutter);
+  border-top: 1px solid rgba(3, 105, 235, 0.1);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  color: rgba(3, 105, 235, 0.7);
+}
+
+.site-footer a {
+  color: rgba(3, 105, 235, 0.7);
+  transition: opacity var(--transition-fast);
+}
+
+.site-footer a:hover {
+  opacity: 1;
+  color: var(--color-blue);
+}
+
+
+/* ==========================================================================
+   16. Optional utility classes
+   ========================================================================== */
+
+.bg-blue {
+  background: var(--color-blue);
+}
+
+.bg-pink {
+  background: var(--color-pink);
+}
+
+.bg-white {
+  background: var(--color-white);
+}
+
+.bg-light-orange {
+  background: var(--color-light-orange);
+}
+
+.bg-dark-orange {
+  background: var(--color-dark-orange);
+}
+
+.bg-yellow {
+  background: var(--color-yellow);
+}
+
+.text-blue {
+  color: var(--color-blue);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+
+/* ==========================================================================
+   17. Responsive behaviour
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .interest-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .statement-grid,
+  .townhall-grid,
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem var(--page-gutter);
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .bring-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+  }
+
+  .section-pad {
+    padding: clamp(2rem, 3vw, 3rem) var(--page-gutter);
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 0.75rem var(--page-gutter);
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .site-nav {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 12vw, 3.5rem);
+  }
+
+  .lede {
+    font-size: 0.95rem;
+  }
+
+  .hero-shape {
+    display: none;
+  }
+
+  .section-pad {
+    padding: 1.5rem 1rem;
+  }
+
+  .interest-card {
+    min-height: 180px;
+    padding: 1rem;
+  }
+
+  .card-cutout::before {
+    width: 50%;
+  }
+
+  .half-circle {
+    width: clamp(80px, 20vw, 120px);
+  }
+
+  .steps article span,
+  .steps article h3 {
+    font-size: 0.95rem;
+  }
+
+  .bring-list div {
+    gap: 0.75rem;
+  }
+
+  .details-grid {
+    gap: 1rem;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem var(--page-gutter);
+    text-align: center;
+  }
+}
+
+
+/* ==========================================================================
+   18. Reduced motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
